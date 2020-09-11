@@ -24,8 +24,6 @@ module ECommerce
     end
     # タイムゾーンを東京に設定
     config.time_zone = "Tokyo"
-    # 日本語対応
-    config.i18n.default_locale = :ja
     config.load_defaults 5.2
     config.generators.system_tests = nil
   end
