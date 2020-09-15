@@ -12,4 +12,11 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require jquery
+//= require jquery_ujs
+//= require materialize
 //= require_tree .
+
+$(document).ready(function(){
+  $('select').formSelect();
+});

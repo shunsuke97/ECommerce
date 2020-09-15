@@ -37,3 +37,5 @@ gem 'simple_form'
 gem 'enumerize'
 # 画像アップロード
 gem 'carrierwave', '~> 1.0'
+gem 'jquery-rails'
+gem 'materialize-sass'
