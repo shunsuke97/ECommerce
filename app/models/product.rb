@@ -15,4 +15,8 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :unit, presence: true
+
+  # unitの選択肢をyenとusdのみにする
+  extend Enumerize
+  enumerize :unit, in:[:yen, :usd]
 end

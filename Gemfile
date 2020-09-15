@@ -29,5 +29,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'hamlit'
+# メソッドを定義してviewを補佐する
 gem 'active_decorator'
+# form_forの記述を簡略化
 gem 'simple_form'
+# モデルにて列挙型を扱いやすくする
+gem 'enumerize'
