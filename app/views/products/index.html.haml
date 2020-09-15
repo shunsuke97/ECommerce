@@ -1,7 +1,14 @@
-- @products.each do |product|
-  .product
-    %p
-      = product.name
-    %p
-      = product.display_price
-    %hr
+%h2.center 商品一覧
+.products
+  .row
+    - @products.each do |product|
+      .col.s12.m6
+        .card
+          .card-image
+            - if product.image.present?
+              = image_tag product.image_url
+            %span.card-title
+              -# {product.name}（#{product.display_price}）
+          .card-content
+            %p
+              = product.description

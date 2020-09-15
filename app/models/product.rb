@@ -15,4 +15,11 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :unit, presence: true
+
+  # unitの選択肢をyenとusdのみにする
+  extend Enumerize
+  enumerize :unit, in:[:yen, :usd]
+
+  # carrierwaveの設定
+  mount_uploader :image, ImageUploader
 end
