@@ -19,4 +19,7 @@ class Product < ApplicationRecord
   # unitの選択肢をyenとusdのみにする
   extend Enumerize
   enumerize :unit, in:[:yen, :usd]
+
+  # carrierwaveの設定
+  mount_uploader :image, ImageUploader
 end

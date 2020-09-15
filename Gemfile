@@ -35,3 +35,5 @@ gem 'active_decorator'
 gem 'simple_form'
 # モデルにて列挙型を扱いやすくする
 gem 'enumerize'
+# 画像アップロード
+gem 'carrierwave', '~> 1.0'

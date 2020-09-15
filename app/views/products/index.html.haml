@@ -1,4 +1,8 @@
+%h2 商品一覧
+
 - @products.each do |product|
+  - if product.image.present?
+    = image_tag product.image_url
   .product
     %p
       = product.name
