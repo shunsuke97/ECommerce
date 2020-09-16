@@ -4,5 +4,10 @@
   %ul.collection.with-header
     - @products.each do |product|
       %li.collection-item
-        = product.name
-        = product.price
+        #{product.name}
+        %p.right
+          %span
+            = product.display_price
+          = link_to product_delete_in_baskets_path(product), method: :post, data: {confirm: '本当に削除しても良いですか？'} do
+            %span.basket__delete
+              ✕
