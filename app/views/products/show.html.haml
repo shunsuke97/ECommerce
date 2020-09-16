@@ -1,0 +1,13 @@
+- if @product.image.url.present?
+  = image_tag @product.image.url
+- else
+  = image_tag "sample.png"
+%p
+  = @product.name
+%p
+  = @product.description
+%p
+  = @product.display_price
+
+.btn.btn-large
+  買い物かごに入れる

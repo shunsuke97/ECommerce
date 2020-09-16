@@ -14,6 +14,9 @@ class Product < ApplicationRecord
 
   has_many :basket_products, dependent: :destroy
 
+  # gem'hashed-rails'の設定
+  include Hashid::Rails
+
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true

@@ -90,6 +90,10 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
+    hashid-rails (1.4.1)
+      activerecord (>= 4.0)
+      hashids (~> 1.0)
+    hashids (1.0.5)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -224,6 +228,7 @@ DEPENDENCIES
   enumerize
   faker
   hamlit
+  hashid-rails (~> 1.0)
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
