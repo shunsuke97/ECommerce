@@ -11,3 +11,5 @@
           = link_to product_delete_in_baskets_path(product), method: :post, data: {confirm: '本当に削除しても良いですか？'} do
             %span.basket__delete
               ✕
+  .basket__total-amount.right
+    合計金額 #{@total_price} 円
