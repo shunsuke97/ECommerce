@@ -11,6 +11,9 @@
 #  updated_at  :datetime         not null
 #
 class Product < ApplicationRecord
+  # gem'hashed-rails'の設定
+  include Hashid::Rails
+
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
