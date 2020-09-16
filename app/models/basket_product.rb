@@ -1,0 +1,2 @@
+class BasketProduct < ApplicationRecord
+end
