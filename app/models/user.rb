@@ -23,4 +23,10 @@ class User < ApplicationRecord
          :confirmable
 
   has_one :basket, dependent: :destroy
+
+  def prepare_basket
+    # create_basket == has_oneのリレーションを作ることによって定義されるメソッド
+    # basketがないとき、後半が評価される
+    basket || create_basket
+  end
 end
