@@ -2,13 +2,14 @@
 .products
   .row
     - @products.each do |product|
-      .col.s12.m6
-        .card
-          .card-image
-            - if product.image.present?
-              = image_tag product.image_url
-            %span.card-title
-              -# {product.name}（#{product.display_price}）
-          .card-content
-            %p
-              = product.description
+      = link_to product_path(product) do
+        .col.s12.m6
+          .card
+            .card-image
+              - if product.image.present?
+                = image_tag product.image_url
+              %span.card-title
+                -# {product.name}（#{product.display_price}）
+            .card-content
+              %p
+                = product.description

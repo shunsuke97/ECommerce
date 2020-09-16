@@ -39,3 +39,5 @@ gem 'enumerize'
 gem 'carrierwave', '~> 1.0'
 gem 'jquery-rails'
 gem 'materialize-sass'
+# 商品にhash値を付与
+gem 'hashid-rails', '~> 1.0'
