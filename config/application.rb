@@ -13,6 +13,9 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
+# .envを読み込み
+Dotenv::Railtie.load
+
 module ECommerce
   class Application < Rails::Application
     # rails gコマンド使用時に不要ファイルを生成しない

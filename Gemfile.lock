@@ -77,6 +77,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     enumerize (2.3.1)
       activesupport (>= 3.2)
     erubi (1.9.0)
@@ -226,6 +230,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails
   enumerize
   faker
   hamlit

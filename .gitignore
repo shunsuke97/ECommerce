@@ -29,3 +29,6 @@
 # 画像ファイル
 /public/uploads
 /app/assets/images
+
+# 環境変数
+/.env
