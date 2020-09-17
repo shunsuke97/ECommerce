@@ -41,3 +41,5 @@ gem 'jquery-rails'
 gem 'materialize-sass'
 # 商品にhash値を付与
 gem 'hashid-rails', '~> 1.0'
+# 決済サービスを導入
+gem 'stripe'
