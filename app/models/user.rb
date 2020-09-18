@@ -29,4 +29,12 @@ class User < ApplicationRecord
     # basketがないとき、後半が評価される
     basket || create_basket
   end
+
+  def checkout!(token, product_ids:)
+    # 買い物かごから商品を削除
+    total = basket.total_price(product_ids: product_ids)
+    basket_products = basket.basket_products.where(product_id: product_ids)
+    basket_products.each(&:destroy!)
+    Charge.create!(total, token)
+  end
 end
