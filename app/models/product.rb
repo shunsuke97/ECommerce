@@ -13,6 +13,7 @@
 class Product < ApplicationRecord
 
   has_many :basket_products, dependent: :destroy
+  has_many :purchase_product_records, dependent: :destroy
 
   # gem'hashed-rails'の設定
   include Hashid::Rails

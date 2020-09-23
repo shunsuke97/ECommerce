@@ -6,6 +6,7 @@ ruby '2.5.1'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -41,3 +42,5 @@ gem 'jquery-rails'
 gem 'materialize-sass'
 # 商品にhash値を付与
 gem 'hashid-rails', '~> 1.0'
+# 決済サービスを導入
+gem 'stripe'
