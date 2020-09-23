@@ -23,6 +23,7 @@ class User < ApplicationRecord
          :confirmable
 
   has_one :basket, dependent: :destroy
+  has_one :purchase_record, dependent: :destroy
 
   def prepare_basket
     # create_basket == has_oneのリレーションを作ることによって定義されるメソッド
