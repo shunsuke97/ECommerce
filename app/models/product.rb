@@ -14,6 +14,7 @@ class Product < ApplicationRecord
 
   has_many :basket_products, dependent: :destroy
   has_many :purchase_product_records, dependent: :destroy
+  belongs_to :admin
 
   # gem'hashed-rails'の設定
   include Hashid::Rails

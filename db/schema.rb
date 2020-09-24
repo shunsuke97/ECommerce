@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_23_175236) do
+ActiveRecord::Schema.define(version: 2020_09_18_085802) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_175236) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "admin_id", null: false
     t.string "name", null: false
     t.text "description", null: false
     t.integer "price", null: false
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_175236) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.index ["admin_id"], name: "index_products_on_admin_id"
   end
 
   create_table "purchase_record_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -83,6 +85,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_175236) do
   add_foreign_key "basket_products", "baskets"
   add_foreign_key "basket_products", "products"
   add_foreign_key "baskets", "users"
+  add_foreign_key "products", "admins"
   add_foreign_key "purchase_record_products", "purchase_records"
   add_foreign_key "purchase_records", "users"
 end
