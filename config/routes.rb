@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'products#index'
 
+  # resource :basket, only: [:show]と同義
   resource :basket, only: %i(show)
   resource :charge, only: %i(create)
 
@@ -11,5 +12,9 @@ Rails.application.routes.draw do
       resources :add_to_baskets, only: %i(create)
       resources :delete_in_baskets, only: %i(create)
     end
+  end
+
+  namespace :admins do
+    resources :products, only: %i(new create)
   end
 end
