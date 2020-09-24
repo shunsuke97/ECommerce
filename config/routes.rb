@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admins do
+    # /adminsにアクセスした際にdashboards#index
+    root to: "dashboards#index"
     resources :products, only: %i(new create)
   end
 end
