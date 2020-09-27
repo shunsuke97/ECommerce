@@ -9,6 +9,8 @@
           %span.admin__sales.ml-10
             #{current_admin.sales.to_s(:delimited)} 円
       %li.collection-item.admin__collection-item
+        .btn.white
+          = link_to '詳細', admins_sales_record_path
         %span
           今月の売上
           %span.admin__sales.ml-10
