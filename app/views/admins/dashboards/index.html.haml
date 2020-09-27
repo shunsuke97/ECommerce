@@ -1,2 +1,19 @@
-%h1
-  Dashboard
+.container
+  %h2.center
+    Admin Dashboard
+  .collection
+    %ul
+      %li.collection-item.admin__collection-item
+        %span
+          今までの売上
+          %span.admin__sales.ml-10
+            #{current_admin.sales.to_s(:delimited)} 円
+      %li.collection-item.admin__collection-item
+        .btn.white
+          = link_to '詳細', admins_sales_record_path
+        %span
+          今月の売上
+          %span.admin__sales.ml-10
+            #{current_admin.sales_this_month.to_s(:delimited)} 円
+        .btn.white
+          = link_to '詳細', admins_sales_record_path(start_at: Time.current.beginning_of_month, end_at: Time.current.end_of_month)

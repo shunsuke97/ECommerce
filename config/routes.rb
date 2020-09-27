@@ -18,5 +18,6 @@ Rails.application.routes.draw do
     # /adminsにアクセスした際にdashboards#index
     root to: "dashboards#index"
     resources :products, only: %i(new create)
+    resource :sales_record, only: %i(show)
   end
 end
