@@ -15,3 +15,5 @@
           今月の売上
           %span.admin__sales.ml-10
             #{current_admin.sales_this_month.to_s(:delimited)} 円
+        .btn.white
+          = link_to '詳細', admins_sales_record_path(start_at: Time.current.beginning_of_month, end_at: Time.current.end_of_month)
